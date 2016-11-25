@@ -16,10 +16,10 @@ static import pdf = wkhtmltox.pdf;
 
 void main() {
   pdf.init();
-  
-	auto cvt = pdf.createConverter([ "out": "google.pdf" ]);
-	cvt.add("https://www.google.com");
-	cvt.convert();
+
+  auto cvt = pdf.createConverter([ "out": "google.pdf" ]);
+  cvt.add("https://www.google.com");
+  cvt.convert();
 }
 ```
 
@@ -31,9 +31,8 @@ static import img = wkhtmltox.image;
 
 void main() {
   img.init();
-  
-	auto cvt = img.createConverter("https://www.google.com", [ "out": "google.png" ]);
-	cvt.convert();
+
+  auto cvt = img.createConverter("https://www.google.com", [ "out": "google.png" ]);
+  cvt.convert();
 }
 ```
-
