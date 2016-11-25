@@ -1,0 +1,5 @@
+name "wkhtmltox"
+description "Thin wrapper for wkhtmltox"
+authors "Márcio Martins"
+copyright "Copyright © 2016, Márcio Martins"
+license "MIT"
