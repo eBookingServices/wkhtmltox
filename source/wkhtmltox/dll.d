@@ -173,7 +173,11 @@ void init() {
 	if (dll_)
 		return;
 
-	dll_ = dlopen("libwkhtmltox.so", RTLD_LAZY);
+	version(OSX)
+		dll_ = dlopen("libwkhtmltox.dylib", RTLD_LAZY);
+	else
+		dll_ = dlopen("libwkhtmltox.so", RTLD_LAZY);
+
 	if (!dll_)
 		throw new Exception(fromStringz(dlerror()).idup());
 
